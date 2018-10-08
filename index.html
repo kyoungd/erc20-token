@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MetaCoin - Demo Wallet</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">  
+  <script src="./app.js"></script>
+</head>
+<body>
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+        <div class="background-box">
+          <h1 class="display-3">MetaCoin Wallet</h1>
+          <h2>You have <span class="black"><span id="balance"></span> META. </span></h2>
+          <h3>
+            <a href="demo/index.html" target="_blank">(demo) </a>
+
+            Contract address at <span class="black"><span id="contract_address"></span> </span>
+          </h3>
+          <span id="status"></span>
+          <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
+      </div><!-- /. background-box -->
+    </div>
+  </div>
+  <!-- End jumbotron -->
+
+  <!-- BEGIN PUBLIC TRANSACTION SECTION -->
+  <section id="public-transactions-section">
+      <div class="container">
+        <!-- Row of columns -->
+        <div class="row">
+            <!-- PUBLIC TRANSACTIONS HEADING -->
+            <div class="col-lg-12 text-center section-header">
+                <h1 class="section-heading">Public Transactions</h1>
+                <span class="separator"></span>
+                <!--<p class="section-subheading ">Partnership or temporary organization perfectly designed.</p>-->
+            </div>
+            <!-- END PUBLIC TRANSACTIONS HEADING -->
+          <div class="col-md-4 margin-top-2em">
+          <div class="center">
+             <img src="app/img/graphic-icons-100x100-transfer.png" class="img-circle img-responsive text-center">
+           </div>
+            <h2 class="panel-heading">Transfer MetaCoin</h2>
+            <p align="center"><label for="transferFrom">From Address:</label><input type="text" id="transferFrom" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input></p>
+            <p align="center"><label for="transferAmount">Amount:</label><input type="text" id="transferAmount" placeholder="e.g., 95"></input></p>
+            <p align="center"><label for="transferReceiver">To Address:</label><input type="text" id="transferReceiver" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input></p>
+                  <p align="center"><span><button class="btn-success" id="send" onclick="App.transferFund()">Send MetaCoin</button></span>
+                  <span><button class="btn-success" id="approval" onclick="App.approveFund()">Approve MetaCoin</button></span></p>
+            <br><br>
+            <!--
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          -->
+          </div>
+
+          <div class="col-md-4 margin-top-2em">
+          <div class="center">
+              <img src="app/img/graphic-icons-100x100-buy.png" class="img-responsive">
+          </div>
+            <h2 class="panel-heading">Buy MetaCoin</h2>
+            <p align="center"><label for="buy_amount">Buy Amount:</label><input type="text" id="buy_amount" placeholder="e.g., 95000"></input></p>
+            <p align="center"><button class="btn-success" id="buy_token" onclick="App.buyToken()">Buy Token</button></p>
+            <br><br>
+         </div>
+
+          <div class="col-md-4 margin-top-2em">
+              <div class="center">
+              <img src="app/img/graphic-icons-100x100-sale.png" class="img-circle img-responsive">
+          </div>
+            <h2 class="panel-heading">Sell MetaCoin</h2>
+            <p align="center"><label for="sell_amount">Sell Amount:</label><input type="text" id="sell_amount" placeholder="e.g., 95000"></input></p>
+            <p align="center"><button class="btn-success" id="sell_token" onclick="App.sellToken()">Sell Token</button></p>
+          </div>
+        </div>
+    </section>
+    <!-- END PUBLIC TRANSACTION SECTION -->
+
+    <!-- BEGIN ADMINISTRATION SECTION -->
+    <section id="administration-section">
+        <div class="container">
+          <!-- Row of columns -->
+          <div class="row">
+              <!-- ADMINISTRATION HEADING -->
+              <div class="col-lg-12 text-center section-header">
+                  <h1 class="section-heading">Administration Transactions</h1>
+                  <span class="separator"></span>
+                  <!--<p class="section-subheading ">Partnership or temporary organization perfectly designed.</p>-->
+              </div>
+              <!-- END ADMINISTRATION HEADING -->
+            <div class="col-md-4 margin-top-2em">
+                <div class="center">
+                    <img src="app/img/graphic-icons-100x100-buy-sell.png" class="img-responsive">
+                </div>
+              <h2 class="panel-heading">Buy/Sell Price</h2>
+              <p align="center"><label for="buy_price">Buy Price:</label><input type="text" id="buy_price" placeholder="Buy Price"></input></p>
+              <p align="center"><label for="sell_price">Sell Price:</label><input type="text" id="sell_price" placeholder="Sell Price"></input></p>
+              <p align="center"><button class="btn-success" id="buy_sell" onclick="App.setPrices()">Set MetaCoin Price</button></p>
+            </div>
+
+            <div class="col-md-4 margin-top-2em">
+                <div class="center">
+                    <img src="app/img/graphic-icons-100x100-mint.png" class="img-responsive">
+                </div>
+              <h2 class="panel-heading">Mint New MetaCoin</h2>
+              <p align="center"><label for="mint_amount">Buy Price:</label><input type="text" id="mint_amount" placeholder="e.g., 95000"></input></p>
+              <p align="center"><label for="mint_receiver">Sell Price:</label><input type="text" id="mint_receiver" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input></p>
+              <p align="center"><button class="btn-success" id="mint_token" onclick="App.mintToken()">Mint Token</button></p>
+           </div>
+
+            <div class="col-md-4 margin-top-2em">
+                <div class="center">
+                    <img src="app/img/graphic-icons-100x100-freeze.png" class="img-responsive">
+                </div>
+              <h2 class="panel-heading">Freeze/Unfreeze Account</h2>
+              <p align="center"><label for="is_freeze_account">Freeze:</label>
+                <select type="text" id="is_freeze_account" placeholder="">
+                  <option value="true">Freeze Account</option>
+                  <option value="false">Unfreeze Account</option>
+                </select>
+            </p>
+              <p align="center"><label for="freeze_receiver">Account:</label><input type="text" id="freeze_receiver" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input></p>
+              <p align="center"><button class="btn-success" id="freeze_account" onclick="App.freezeAccount()">Freeze Token</button></p>
+            </div>
+          </div>
+      </section>
+      <!-- END PUBLIC TRANSACTION SECTION -->
+  <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+</body>
+</html>

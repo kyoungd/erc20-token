@@ -1,0 +1,110 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+.bg-inverse {
+    background-color: #060d13!important;
+    border-bottom: solid 2px #182835;
+}
+
+.section-header {
+    margin-bottom:4em;
+}
+
+.panel-heading {
+    padding-bottom: 1em;
+    color: #04595b;
+}
+
+.panel-buttons {
+    margin: 0 auto;
+}
+
+.margin-top-2em {
+    margin-top: 2em;
+}
+
+#public-transactions-section {
+    padding-top: 0em;
+    padding-bottom: 4em;
+}
+.panel-heading {
+    text-align: center;
+    margin-top:1em;
+}
+
+section h1.section-heading {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-size: 3em;
+    letter-spacing: 1px;
+    line-height: .875em;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #04595b;
+}
+section h2.section-heading {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 50px;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
+section .section-subheading {
+    margin-bottom: 95px;
+    text-transform: none;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 1;
+    margin-top: 25px;
+    color: #666666;
+    font-weight: 400;
+}
+.separator {
+    width: 100px;
+    height: 2px;
+    display: block;
+    margin:auto;
+    background-color: transparent;
+    border-style: dashed;
+    border-color: #74afaf;
+}
+
+#administration-section {
+    background-color: #f0f7f7;
+    padding-top:4em;
+    padding-bottom: 4em;
+}
+#administration-section .separator {
+        width: 100px;
+        height: 2px;
+        display: block;
+        margin:auto;
+        margin-top: 0;
+        background-color: transparent;
+        border-style: dashed;
+        border-color: #888;
+    }
+.jumbotron {
+    background-image: url(/app/img/crypto-currency-wallet-02.jpg);
+    background-size: cover;
+    height: 100%;
+    border-radius: 0px;
+    min-height: 300px;
+    color: white;
+    text-shadow: 2px 2px 0px #000;
+}
+.jumbotron .background-box {
+    background: rgba(0, 0, 0, .5);
+    padding: 1em;
+    letter-spacing: 1px;
+    margin: 0 auto;
+}
+.text-center {
+    text-align: center!important;
+}
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+#status {
+  color: yellow;
+}
